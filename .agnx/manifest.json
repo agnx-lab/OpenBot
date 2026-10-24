@@ -1,0 +1,45 @@
+{
+  "id": "openbot",
+  "name": "OpenBot",
+  "version": "0.1.0",
+  "description": "Agnx 外置子应用：CopilotKit OpenBot 整仓（Bun app + Hono server）原样起服 + iframe 嵌入",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./.agnx/assets/icon.svg",
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-openbot.mjs",
+    "stateFile": "openbot.json",
+    "defaultPort": 8101
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "capabilities": [
+      "cookies",
+      "websocket"
+    ],
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "openbot.open",
+        "title": "OpenBot"
+      }
+    ],
+    "panels": [
+      {
+        "id": "openbot.main",
+        "title": "OpenBot"
+      }
+    ]
+  },
+  "platforms": {
+    "desktop": "supported",
+    "web": "supported",
+    "mobile": "unsupported"
+  }
+}

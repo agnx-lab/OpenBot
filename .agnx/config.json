@@ -1,0 +1,10 @@
+{
+  "appId": "openbot",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/CopilotKit/OpenBot"
+  },
+  "updatedAt": "2026-10-19T18:40:00.000Z"
+}
